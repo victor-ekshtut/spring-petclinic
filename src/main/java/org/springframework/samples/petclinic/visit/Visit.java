@@ -34,6 +34,11 @@ import java.time.LocalDate;
 @Table(name = "visits")
 public class Visit extends BaseEntity {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Column(name = "visit_date")
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate date;
