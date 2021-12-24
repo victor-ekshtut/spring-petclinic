@@ -24,7 +24,3 @@ jobs:
           cache: maven
       - name: Build with Maven Wrapper
         run: ./mvnw -B package
-      - name: Run Application
-        run: ./mvnw spring-boot:run
-      #- name: Run with Maven Wrapper
-      #  run: ./mvnw spring-boot:run

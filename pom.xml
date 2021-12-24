@@ -6,7 +6,6 @@
   <groupId>org.springframework.samples</groupId>
   <artifactId>spring-petclinic</artifactId>
   <version>2.6.0-SNAPSHOT</version>
-  <!-- test commit -->
 
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -124,7 +123,7 @@
 
   <build>
     <plugins>
-      <!--<plugin>
+      <plugin>
         <groupId>io.spring.javaformat</groupId>
         <artifactId>spring-javaformat-maven-plugin</artifactId>
         <version>${spring-format.version}</version>
@@ -136,7 +135,7 @@
             </goals>
           </execution>
         </executions>
-      </plugin>-->
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
