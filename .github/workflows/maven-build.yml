@@ -25,4 +25,4 @@ jobs:
       - name: Build with Maven Wrapper
         run: ./mvnw -B package
       - name: Run App
-        run: ./mvnw spring-boot:run &
+        run: ./mvnw spring-boot:run
