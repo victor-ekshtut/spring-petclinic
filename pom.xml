@@ -32,7 +32,7 @@
     
     <sonar.organization>victor-ekshtut-org</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-    <sonar.sources>org/**/*</sonar.sources>
+    <sonar.sources>srs/main/java</sonar.sources>
     <!--<sonar.tests>**/test/**</sonar.tests>-->
   </properties>
 
