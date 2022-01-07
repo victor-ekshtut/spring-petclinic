@@ -400,6 +400,23 @@
                 </lifecycleMappingMetadata>
               </configuration>
             </plugin>
+            
+        <plugin>
+            <groupId>com.github.sgoertzen</groupId>
+            <artifactId>sonarbreak</artifactId>
+            <version>1.2.2</version>
+            <configuration>
+                <sonarServer>https://sonar.yourserver.com</sonarServer>
+                <sonarLookBackSeconds>60</sonarLookBackSeconds>
+                <waitForProcessingSeconds>600</waitForProcessingSeconds>
+            </configuration>
+        </plugin>        
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>sonar-maven-plugin</artifactId>
+          <version>2.7.1</version>
+        </plugin>
+            
           </plugins>
         </pluginManagement>
       </build>
