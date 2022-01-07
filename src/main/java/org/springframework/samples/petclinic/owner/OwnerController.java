@@ -15,9 +15,13 @@
  */
 package org.springframework.samples.petclinic.owner;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
+import javax.sql.DataSource;
 import javax.validation.Valid;
 
 import org.springframework.data.domain.Page;
@@ -164,7 +168,29 @@ class OwnerController {
 			pet.setVisitsInternal(visits.findByPetId(pet.getId()));
 		}
 		mav.addObject(owner);
+		getExtraInfoForOwner(owner);
+		
 		return mav;
+	}
+	
+	@SuppressWarnings("null")
+	private String getExtraInfoForOwner(Owner owner) {
+		String result = "";
+		String lastName = owner.getLastName();
+		
+	    DataSource dataSource = null;
+	    
+	    String sql = "SELECT DISTINCT owner FROM Owner owner WHERE owner.lastName = '"+lastName+"'";
+		Connection c;
+		try {
+			c = dataSource.getConnection();
+			ResultSet rs = c.createStatement().executeQuery(sql);
+			result = rs.getString(0);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return result;
 	}
 
 }
