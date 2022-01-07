@@ -168,7 +168,7 @@ class OwnerController {
 			pet.setVisitsInternal(visits.findByPetId(pet.getId()));
 		}
 		mav.addObject(owner);
-		getExtraInfoForOwner(owner);
+		//getExtraInfoForOwner(owner);
 		
 		return mav;
 	}
