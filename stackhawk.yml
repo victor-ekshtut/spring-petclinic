@@ -1,9 +1,9 @@
 # -- stackhawk configuration for petclinic --
 app:
   # -- An applicationId obtained from the StackHawk platform.  --
-  applicationId: 32abb6ea-5c8d-4d65-b9d1-c47aafe7d441 # (required)
+  applicationId: 85857349-031e-4389-9813-63813b5adac6 # (required)
   # -- The environment for the applicationId defined in the StackHawk platform.  --
-  env: Pre-Production # (required)
+  env: Development # (required)
   # -- The url of your application to scan --
   host: http://localhost:3000 # (required)
   
