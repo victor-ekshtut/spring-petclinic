@@ -10,7 +10,7 @@ app:
 hawk:
   failureThreshold: high
 
-# -- Customized Configuration for GraphQL/SOAP/OpenAPI, add here --
+# -- Customized Configuration for GraphQL/SOAP/OpenAPI, add here  --
   # openApiConf:
   #   path: /swagger.json # OR...
 #       filePath: openApi.json
