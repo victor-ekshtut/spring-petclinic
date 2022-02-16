@@ -1,4 +1,4 @@
-name: Build start SonarCloud as Maven Plugin
+name: ShiftLeft
 
 on:
   push:
