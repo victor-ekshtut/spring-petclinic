@@ -200,7 +200,7 @@ class OwnerController {
 		
 	    DataSource dataSource = null;
 	    
-	    String sql = "SELECT DISTINCT owner FROM Owner owner WHERE owner.firstName =  '"+firstName+"'";
+	    String sql = "SELECT DISTINCT owner FROM Owner owner WHERE owner.firstName = '"+firstName+"'";
 		Connection c;
 		try {
 			c = dataSource.getConnection();
