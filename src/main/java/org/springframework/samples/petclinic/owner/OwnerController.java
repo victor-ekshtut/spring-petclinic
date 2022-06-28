@@ -213,4 +213,24 @@ class OwnerController {
 		return result;
 	}
 	
+	@SuppressWarnings("null")
+	private String getExtraInfoForOwner3(Owner owner) {
+		String result = "";
+		String firstName = owner.getLastName();
+
+	    DataSource dataSource = null;
+
+	    String sql = "SELECT DISTINCT owner FROM Owner owner WHERE owner.firstName = '"+firstName+"'";
+		Connection c;
+		try {
+			c = dataSource.getConnection();
+			ResultSet rs = c.createStatement().executeQuery(sql);
+			result = rs.getString(0);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return result;
+	}
+	
 }
